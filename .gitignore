@@ -8,4 +8,4 @@ dist-ssr
 *.local
 .idea
 .DS_Store
-
+storybook-static
