@@ -2,9 +2,14 @@ import { FC, ReactNode } from 'react';
 import styles from './Button.module.scss';
 import classNames from "classnames";
 
-export enum ButtonType {
+export enum ButtonColor {
     PRIMARY = 'primary',
     SECONDARY = 'secondary',
+}
+
+export enum ButtonVariant {
+    BORDERED = 'bordered',
+    FADED = 'faded',
 }
 
 export enum ButtonSize {
@@ -15,17 +20,22 @@ export enum ButtonSize {
 
 export type ButtonProps = {
     children: ReactNode;
-    type: ButtonType;
+    color: ButtonColor;
     size: ButtonSize;
     className?: string;
+    variant?: ButtonVariant;
 };
 
-export const Button: FC<ButtonProps> = ({ children, type, size, className }) => (
+export const Button: FC<ButtonProps> = ({ children, color, size, className, variant }) => (
     <button
         className={classNames(styles.button, className,
             {
-                [styles.primary]: type === ButtonType.PRIMARY,
-                [styles.secondary]: type === ButtonType.SECONDARY,
+                [styles.primary]: color === ButtonColor.PRIMARY,
+                [styles.secondary]: color === ButtonColor.SECONDARY,
+            },
+            {
+                [styles.bordered]: variant === ButtonVariant.BORDERED,
+                [styles.faded]: variant === ButtonVariant.FADED,
             },
             {
                 [styles.small]: size === ButtonSize.SMALL,

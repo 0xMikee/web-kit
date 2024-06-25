@@ -1,12 +1,12 @@
-import {Button, ButtonSize, ButtonType} from "../lib/components/Button/Button.tsx";
+import "./styles/global.scss";
+import {Button, ButtonColor, ButtonSize, ButtonVariant} from "../lib/components/Button/Button.tsx";
 
 function App() {
 
   return (
       <>
-        <Button size={ButtonSize.SMALL} type={ButtonType.PRIMARY}>Small</Button>
-        <Button size={ButtonSize.MEDIUM} type={ButtonType.SECONDARY}>Medium</Button>
-        <Button size={ButtonSize.LARGE} type={ButtonType.PRIMARY}>Large</Button>
+        <Button size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} variant={ButtonVariant.FADED}>Medium</Button>
+        <Button size={ButtonSize.LARGE} color={ButtonColor.SECONDARY} variant={ButtonVariant.BORDERED}>Large</Button>
       </>
   )
 }

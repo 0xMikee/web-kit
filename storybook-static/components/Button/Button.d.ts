@@ -1,8 +1,12 @@
 import { FC, ReactNode } from '../../../node_modules/react';
 
-export declare enum ButtonType {
+export declare enum ButtonColor {
     PRIMARY = "primary",
     SECONDARY = "secondary"
+}
+export declare enum ButtonVariant {
+    BORDERED = "bordered",
+    FADED = "faded"
 }
 export declare enum ButtonSize {
     SMALL = "small",
@@ -11,8 +15,9 @@ export declare enum ButtonSize {
 }
 export type ButtonProps = {
     children: ReactNode;
-    type: ButtonType;
+    color: ButtonColor;
     size: ButtonSize;
     className?: string;
+    variant?: ButtonVariant;
 };
 export declare const Button: FC<ButtonProps>;

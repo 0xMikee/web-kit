@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {Button, ButtonSize, ButtonType} from './Button';
+import {Button, ButtonColor, ButtonSize, ButtonVariant} from "./Button";
 
 const meta = {
     title: 'Button',
@@ -14,7 +14,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        type: ButtonType.PRIMARY,
+        color: ButtonColor.PRIMARY,
+        variant: ButtonVariant.FADED,
         size: ButtonSize.SMALL,
         children: "Primary Small"
     },
@@ -22,7 +23,8 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
     args: {
-        type: ButtonType.SECONDARY,
+        color: ButtonColor.SECONDARY,
+        variant: ButtonVariant.BORDERED,
         size: ButtonSize.MEDIUM,
         children: "Secondary Medium"
     },
@@ -30,7 +32,8 @@ export const Secondary: Story = {
 
 export const Large: Story = {
     args: {
-        type: ButtonType.SECONDARY,
+        color: ButtonColor.SECONDARY,
+        variant: ButtonVariant.FADED,
         size: ButtonSize.LARGE,
         children: "Large"
     },
@@ -38,7 +41,7 @@ export const Large: Story = {
 
 export const Medium: Story = {
     args: {
-        type: ButtonType.PRIMARY,
+        color: ButtonColor.PRIMARY,
         size: ButtonSize.MEDIUM,
         children: "Medium"
     },
@@ -46,7 +49,7 @@ export const Medium: Story = {
 
 export const Small: Story = {
     args: {
-        type: ButtonType.PRIMARY,
+        color: ButtonColor.PRIMARY,
         size: ButtonSize.SMALL,
         children: "Small",
     },
