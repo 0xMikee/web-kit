@@ -11,6 +11,15 @@ export default defineConfig({
         react(),
         dts({ include: ['lib'] })
     ],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                    @use "./src/styles/theme/_theme" as *;
+                `
+            }
+        }
+    },
     build: {
         copyPublicDir: false,
         lib: {
@@ -22,7 +31,7 @@ export default defineConfig({
             input: Object.fromEntries(
                 // https://rollupjs.org/configuration-options/#input
                 glob.sync('lib/**/*.{ts,tsx}',
-                    { ignore: 'lib/**/*.stories.tsx'}
+                    { ignore: ['lib/**/*.stories.{ts,tsx}']}
                 ).map(file => [
                     // 1. The name of the entry point
                     // lib/nested/foo.js becomes nested/foo

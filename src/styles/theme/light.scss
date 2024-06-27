@@ -1,0 +1,13 @@
+html:not(:global(.dark)) {
+  --color-bg-main: #ff0000;
+  --color-bg-primary: #ff0000;
+  --color-bg-secondary: #ff0000;
+
+  --color-text-main: #101010;
+  --color-text-primary: #121212;
+  --color-text-secondary: #181818;
+
+  --color-border-main: #ff0000;
+  --color-border-primary: #ff0000;
+  --color-border-secondary: #ff0000;
+}

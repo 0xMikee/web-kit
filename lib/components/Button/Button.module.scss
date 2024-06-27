@@ -6,21 +6,21 @@
   cursor: pointer;
   border: none;
   background-color: #2b2b2b;
-  color: #eeeeee;
+  color: var(--color-text-main);
 }
 
 .primary {
   color: #181818;
-  background-color: #fcfcfc;
+  background-color: var(--color-bg-primary);
 
   &.bordered {
     color: #efefef;
-    border-color: #fcfcfc;
+    border-color:  var(--color-bg-primary);
   }
 
   &.faded {
-    background-color: #a7a7a7;
-    border-color: #fcfcfc;
+    background-color:  var(--color-border-primary);
+    border-color:  var(--color-bg-primary);
   }
 }
 

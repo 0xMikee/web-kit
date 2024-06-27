@@ -1,6 +1,6 @@
-import { FC, ReactNode } from 'react';
+import type { FC, ReactNode, ButtonHTMLAttributes } from 'react';
 import styles from './Button.module.scss';
-import classNames from "classnames";
+import classNames from 'classnames';
 
 export enum ButtonColor {
     PRIMARY = 'primary',
@@ -18,35 +18,50 @@ export enum ButtonSize {
     LARGE = 'large',
 }
 
-export type ButtonProps = {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     children: ReactNode;
     color: ButtonColor;
     size: ButtonSize;
     className?: string;
     variant?: ButtonVariant;
     isIconOnly?: boolean;
+    onClick?: (...args: any[]) => void | null;
 };
 
-export const Button: FC<ButtonProps> = ({ children, color, size, className, variant, isIconOnly }) => (
-    <button
-        className={classNames(styles.button,
-            className,
-            isIconOnly && styles.isIconOnly,
-            {
-                [styles.primary]: color === ButtonColor.PRIMARY,
-                [styles.secondary]: color === ButtonColor.SECONDARY,
-            },
-            {
-                [styles.bordered]: variant === ButtonVariant.BORDERED,
-                [styles.faded]: variant === ButtonVariant.FADED,
-            },
-            {
-                [styles.small]: size === ButtonSize.SMALL,
-                [styles.medium]: size === ButtonSize.MEDIUM,
-                [styles.large]: size === ButtonSize.LARGE,
-            },
-        )}
-    >
-        {children}
-    </button>
-);
+export const Button: FC<ButtonProps> = ({
+    children,
+    color,
+    size,
+    className,
+    variant,
+    isIconOnly,
+    onClick,
+}) => {
+    const buttonClassNames = classNames(
+        styles.button,
+        className,
+        isIconOnly && styles.isIconOnly,
+        {
+            [styles.primary]: color === ButtonColor.PRIMARY,
+            [styles.secondary]: color === ButtonColor.SECONDARY,
+        },
+        {
+            [styles.bordered]: variant === ButtonVariant.BORDERED,
+            [styles.faded]: variant === ButtonVariant.FADED,
+        },
+        {
+            [styles.small]: size === ButtonSize.SMALL,
+            [styles.medium]: size === ButtonSize.MEDIUM,
+            [styles.large]: size === ButtonSize.LARGE,
+        },
+    );
+
+    return (
+        <button
+            className={buttonClassNames}
+            onClick={onClick}
+        >
+            {children}
+        </button>
+    );
+};
