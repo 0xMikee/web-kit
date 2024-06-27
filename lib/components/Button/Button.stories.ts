@@ -15,9 +15,10 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {
         color: ButtonColor.PRIMARY,
-        variant: ButtonVariant.FADED,
+        variant: ButtonVariant.BORDERED,
         size: ButtonSize.SMALL,
-        children: "Primary Small"
+        children: "A",
+        isIconOnly: true,
     },
 };
 

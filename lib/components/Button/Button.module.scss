@@ -10,16 +10,17 @@
 }
 
 .primary {
-  color: #ffffff;
-  background-color: #1e1e21;
+  color: #181818;
+  background-color: #fcfcfc;
 
   &.bordered {
-    border-color: #2e2e33;
+    color: #efefef;
+    border-color: #fcfcfc;
   }
 
   &.faded {
-    background-color: #1e1e21;
-    border-color: #2e2e33;
+    background-color: #a7a7a7;
+    border-color: #fcfcfc;
   }
 }
 
@@ -49,16 +50,28 @@
   font-size: 12px;
   padding: 8px 10px;
   border-radius: 8px;
+
+  &.isIconOnly {
+    padding: 4px;
+  }
 }
 
 .medium {
   font-size: 14px;
   padding: 10px 12px;
   border-radius: 10px;
+
+  &.isIconOnly {
+    padding: 8px;
+  }
 }
 
 .large {
   font-size: initial;
   padding: 12px 16px;
   border-radius: 12px;
+
+  &.isIconOnly {
+    padding: 10px;
+  }
 }

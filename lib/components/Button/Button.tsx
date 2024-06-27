@@ -24,11 +24,14 @@ export type ButtonProps = {
     size: ButtonSize;
     className?: string;
     variant?: ButtonVariant;
+    isIconOnly?: boolean;
 };
 
-export const Button: FC<ButtonProps> = ({ children, color, size, className, variant }) => (
+export const Button: FC<ButtonProps> = ({ children, color, size, className, variant, isIconOnly }) => (
     <button
-        className={classNames(styles.button, className,
+        className={classNames(styles.button,
+            className,
+            isIconOnly && styles.isIconOnly,
             {
                 [styles.primary]: color === ButtonColor.PRIMARY,
                 [styles.secondary]: color === ButtonColor.SECONDARY,
