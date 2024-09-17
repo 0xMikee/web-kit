@@ -3,7 +3,7 @@
 
 .header {
   display: grid;
-  grid-template: " . content . " auto / 1fr $contentWidth 1fr;
+  grid-template: " . content . " auto / 1fr $headerWidth 1fr;
 
   @media only screen and (max-width: $breakpoint-big) {
     grid-template: " content " auto / 1fr;

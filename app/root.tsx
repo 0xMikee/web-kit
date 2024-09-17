@@ -10,6 +10,7 @@ import {themeSessionResolver} from "./sessions.server.tsx";
 import {PreventFlashOnWrongTheme, ThemeProvider, useTheme} from "remix-themes";
 import "./styles/global.scss";
 import Header from "@app/components/Header.tsx";
+import Layout from "@app/components/Layout";
 
 export const meta: MetaFunction = () => {
 
@@ -45,7 +46,9 @@ const App = () => {
         </head>
         <body>
             <Header />
-            <Outlet />
+            <Layout>
+                <Outlet />
+            </Layout>
             <ScrollRestoration />
             <Scripts />
         </body>
@@ -59,7 +62,7 @@ const AppWithProviders = () => {
         <ThemeProvider
             specifiedTheme={data.theme}
             themeAction="/action/set-theme"
-            disableTransitionOnThemeChange={true}
+            disableTransitionOnThemeChange
         >
             <App />
         </ThemeProvider>

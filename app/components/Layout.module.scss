@@ -1,0 +1,20 @@
+@import "../styles/breakpoints";
+@import "../styles/variables";
+
+.main {
+  display: grid;
+  grid-template: " . content . " auto / 1fr $contentWidth 1fr;
+
+  @media only screen and (max-width: $breakpoint-big) {
+    grid-template: " content " auto / 1fr;
+  }
+}
+
+.content {
+  grid-area: content;
+  padding: 20px;
+
+  @media only screen and (max-width: $breakpoint-middle) {
+    padding: 0 20px;
+  }
+}

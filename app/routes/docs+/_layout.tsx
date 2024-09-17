@@ -1,18 +1,20 @@
 import {Link, Outlet} from "@remix-run/react";
+import DocsLayout from "@app/components/DocsLayout";
 
-const DocsLayout = () => {
+const Layout = () => {
     return (
-        <div>
-            Layout
-            <Link to="button" >
-                Button
-            </Link>
-            <Link to="tooltip" >
-                Tooltip
-            </Link>
+        <DocsLayout>
+            <div>
+                <Link to="button" >
+                    Button
+                </Link>
+                <Link to="tooltip" >
+                    Tooltip
+                </Link>
+            </div>
             <Outlet />
-        </div>
+        </DocsLayout>
     );
 };
 
-export default DocsLayout;
+export default Layout;
