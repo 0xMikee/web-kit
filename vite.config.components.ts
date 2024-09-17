@@ -3,8 +3,14 @@ import { extname, relative, resolve } from "node:path";
 import { defineConfig } from "vite";
 import { glob } from "glob";
 import dts from "vite-plugin-dts";
+import * as path from "path";
 
 export default defineConfig({
+    resolve: {
+        alias: {
+            '@lib': path.resolve(__dirname, './lib'),
+        },
+    },
     css: {
         preprocessorOptions: {
             scss: {

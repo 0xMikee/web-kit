@@ -9,6 +9,7 @@ import {rootLinks} from "./utils/rootLinks.ts";
 import {themeSessionResolver} from "./sessions.server.tsx";
 import {PreventFlashOnWrongTheme, ThemeProvider, useTheme} from "remix-themes";
 import "./styles/global.scss";
+import Header from "@app/components/Header.tsx";
 
 export const meta: MetaFunction = () => {
 
@@ -43,6 +44,7 @@ const App = () => {
             <title>WebKit</title>
         </head>
         <body>
+            <Header />
             <Outlet />
             <ScrollRestoration />
             <Scripts />

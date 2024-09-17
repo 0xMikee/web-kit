@@ -1,0 +1,53 @@
+@import "../styles/breakpoints";
+@import "../styles/variables";
+
+.header {
+  display: grid;
+  grid-template: " . content . " auto / 1fr $contentWidth 1fr;
+
+  @media only screen and (max-width: $breakpoint-big) {
+    grid-template: " content " auto / 1fr;
+  }
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.logo {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 2px;
+  color: var(--color-text-main);
+  text-decoration: none;
+}
+
+.logoText {
+  &:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.sourceIcon {
+  width: 20px;
+  height: 20px;
+}

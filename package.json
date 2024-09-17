@@ -1,12 +1,19 @@
 {
   "name": "@0xmike/web-kit",
+  "author": "0xMike",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.9",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "ui-kit",
+    "web-component-library",
+    "remix",
+    "typescript"
   ],
   "scripts": {
     "dev": "vite --config vite.config.remix.ts",
@@ -30,7 +37,8 @@
     "inquirer": "^10.2.2",
     "remix-flat-routes": "^0.6.5",
     "remix-themes": "^1.5.1",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
