@@ -1,11 +1,12 @@
-import {Outlet} from "@remix-run/react";
+import {Tooltip} from "@lib/components/Tooltip/Tooltip";
 
-const Button = () => {
+const TooltipDocs = () => {
     return (
         <div>
-            Tooltip
+            <h2>Tooltip</h2>
+            <Tooltip content="Tooltip content" endDelay={200000} side="top">Hover me</Tooltip>
         </div>
     );
 }
 
-export default Button;
+export default TooltipDocs;
