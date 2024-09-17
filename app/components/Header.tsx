@@ -9,6 +9,7 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.content}>
+				<div className={styles.headerStart}>
 				<Link to="/" className={styles.logo}>
 					<div className={styles.logoText}>Web</div>
 					<div className={styles.logoText}>Kit</div>
@@ -21,6 +22,7 @@ const Header = () => {
 						Components
 					</Link>
 				</nav>
+				</div>
 				<div className={styles.buttons}>
 					<a
 						href="https://github.com/0xMikee/web-kit"

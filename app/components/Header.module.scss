@@ -10,12 +10,23 @@
   }
 }
 
+.headerStart {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .content {
   grid-area: content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 20px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
 }
 
 .logo {
@@ -32,6 +43,15 @@
 .logoText {
   &:first-of-type {
     font-weight: bold;
+  }
+}
+
+.link {
+  color: var(--color-text-main);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-text-secondary);
   }
 }
 
