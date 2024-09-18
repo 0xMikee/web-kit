@@ -1,4 +1,3 @@
-// vite.config.remix.ts
 import { defineConfig } from "vite";
 import { vitePlugin as remix } from "@remix-run/dev";
 import { flatRoutes } from "remix-flat-routes";

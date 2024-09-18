@@ -1,4 +1,3 @@
-// vite.config.components.ts
 import { extname, relative, resolve } from "node:path";
 import { defineConfig } from "vite";
 import { glob } from "glob";
@@ -21,10 +20,10 @@ export default defineConfig({
         },
     },
     build: {
-        cssCodeSplit: false, // Disable CSS splitting
+        cssCodeSplit: false,
         copyPublicDir: false,
         lib: {
-            entry: resolve(__dirname, "lib/main.ts"), // Entry point for the WebKit library
+            entry: resolve(__dirname, "lib/main.ts"),
             formats: ["es"],
         },
         rollupOptions: {
