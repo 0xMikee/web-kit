@@ -1,4 +1,4 @@
-import {Button, ButtonColor, ButtonSize} from "@lib/components/Button/Button";
+import {Button, ButtonColor, ButtonSize} from "@lib/components/Button/Button.tsx";
 
 const ButtonDocs = () => {
     return (

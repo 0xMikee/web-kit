@@ -1,17 +1,11 @@
-import {Link, Outlet} from "@remix-run/react";
+import {Outlet} from "@remix-run/react";
 import DocsLayout from "@app/components/DocsLayout";
+import Menu from "@app/components/Menu.tsx";
 
 const Layout = () => {
     return (
         <DocsLayout>
-            <div>
-                <Link to="button" >
-                    Button
-                </Link>
-                <Link to="tooltip" >
-                    Tooltip
-                </Link>
-            </div>
+            <Menu />
             <Outlet />
         </DocsLayout>
     );
