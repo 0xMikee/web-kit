@@ -4,9 +4,7 @@ import styles from "./Menu.module.scss";
 const Menu = () => {
     return (
         <div className={styles.menu}>
-            <Link to="components/button" >
-                <h1>Components</h1>
-            </Link>
+            <div className={styles.sectionTitle}>Components</div>
             <Link to="components/button" >
                 Button
             </Link>
