@@ -6,6 +6,9 @@ const LinkDocs = () => {
             <Link to="#" >
                 Link
             </Link>
+            <Link to="notActive" >
+                Link not active
+            </Link>
         </div>
     );
 }

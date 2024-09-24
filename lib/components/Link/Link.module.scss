@@ -6,3 +6,8 @@
     text-decoration: underline;
   }
 }
+
+.active {
+  font-weight: bold;
+  color: var(--color-text-main);
+}
