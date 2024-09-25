@@ -46,13 +46,8 @@
   }
 }
 
-.link {
-  color: var(--color-text-main);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--color-text-secondary);
-  }
+.activeDocs {
+  color: red;
 }
 
 .buttons {

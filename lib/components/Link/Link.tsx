@@ -6,15 +6,17 @@ import classNames from "classnames";
 interface CustomLinkProps extends RemixLinkProps {
     children: ReactNode;
     className?: string;
+    customActivePath?: string;
 }
 
-export const Link: FC<CustomLinkProps> = ({ to, children, className, ...props }) => {
+export const Link: FC<CustomLinkProps> = ({ to, children, className, customActivePath, ...props }) => {
     const location = useLocation();
     const resolvedPath = useResolvedPath(to);
     const isActive = location.pathname === resolvedPath.pathname;
+    const activePath = customActivePath ? location.pathname.startsWith(customActivePath) : null;
 
     return (
-        <RemixLink to={to} className={classNames(styles.link, className, isActive && styles.active)} {...props}>
+        <RemixLink to={to} className={classNames(className, styles.link, isActive && styles.active, activePath && styles.active)} {...props}>
             {children}
         </RemixLink>
     )

@@ -3,6 +3,7 @@ import {Link} from "@lib/components/Link/Link.tsx";
 const LinkDocs = () => {
     return (
         <div>
+            <h2>Link</h2>
             <Link to="#" >
                 Link
             </Link>

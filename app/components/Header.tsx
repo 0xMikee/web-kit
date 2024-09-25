@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss";
 import ThemeSwitcher from "@app/components/ThemeSwitcher.tsx";
-import {Link} from "@remix-run/react";
+import {Link} from "@lib/components/Link/Link.tsx";
 import {Icon, IconSize} from "@lib/components/Icons/Icon/Icon.tsx";
 import {SocialIconId} from "@lib/components/Icons/SocialIconId.tsx";
 import {Button, ButtonColor, ButtonSize, ButtonVariant} from "@lib/components/Button/Button.tsx";
@@ -15,10 +15,10 @@ const Header = () => {
 					<div className={styles.logoText}>Kit</div>
 				</Link>
 				<nav className={styles.navbar}>
-					<Link to="/docs" className={styles.link}>
+					<Link to="/docs">
 						Docs
 					</Link>
-					<Link to="/docs/components" className={styles.link}>
+					<Link to="/docs/components/" customActivePath="/docs/components">
 						Components
 					</Link>
 				</nav>

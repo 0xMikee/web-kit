@@ -1,8 +1,18 @@
 .menu {
   display: grid;
+  gap: 14px;
 }
 
 .sectionTitle {
-  margin: 8px 0;
+  margin: 10px 0 5px;
+  font-size: 16px;
+
+  &:not(:first-of-type) {
+    padding-top: 20px;
+  }
+}
+
+.menuLink {
+  margin: 5px;
   font-size: 14px;
 }
