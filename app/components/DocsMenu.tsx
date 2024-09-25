@@ -1,7 +1,7 @@
 import {Link} from "@lib/components/Link/Link.tsx";
 import styles from "./Menu.module.scss";
 
-const Menu = () => {
+const DocsMenu = () => {
     return (
         <div className={styles.menu}>
             <div className={styles.sectionTitle}>Docs</div>
@@ -12,11 +12,17 @@ const Menu = () => {
             <Link to="components/button" className={styles.menuLink} >
                 Button
             </Link>
-            <Link to="components/link" className={styles.menuLink} >
-                Link
+            <Link to="components/code" className={styles.menuLink} >
+                Code
             </Link>
             <Link to="components/icon" className={styles.menuLink} >
                 Icon
+            </Link>
+            <Link to="components/link" className={styles.menuLink} >
+                Link
+            </Link>
+            <Link to="components/tabs" className={styles.menuLink} >
+                Tabs
             </Link>
             <Link to="components/tooltip" className={styles.menuLink} >
                 Tooltip
@@ -25,4 +31,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default DocsMenu;

@@ -15,12 +15,11 @@
   background-color: var(--color-bg-primary);
 
   &.bordered {
-    color: #efefef;
-    border-color:  var(--color-bg-primary);
+    color: var(--color-text-main);
+    border-color:  var(--color-border-primary);
   }
 
   &.faded {
-    background-color:  var(--color-border-primary);
     border-color: unset;
   }
 }

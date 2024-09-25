@@ -36,18 +36,14 @@
   align-items: center;
   text-transform: uppercase;
   gap: 2px;
-  color: var(--color-text-main);
-  text-decoration: none;
 }
 
 .logoText {
+  color: var(--color-text-main);
+
   &:first-of-type {
     font-weight: bold;
   }
-}
-
-.activeDocs {
-  color: red;
 }
 
 .buttons {

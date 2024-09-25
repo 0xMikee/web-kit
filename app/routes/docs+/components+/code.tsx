@@ -1,13 +1,14 @@
-import {Tooltip} from "@lib/components/Tooltip/Tooltip.tsx";
+import {Code} from "@lib/components/Code/Code.tsx";
 import Tabs, {Tab} from "@lib/components/Tabs/Tabs.tsx";
 
-const TooltipDocs = () => {
+const CodeDocs = () => {
     return (
         <div>
-            <h2>Tooltip</h2>
+            <h2>Code</h2>
             <Tabs>
                 <Tab label="Preview">
-                    <Tooltip content="Tooltip content" endDelay={2000} side="top">Hover me</Tooltip>
+                    <Code >npm i @0xmike/web-kit</Code>
+                    <Code withCopy >npm i @0xmike/web-kit</Code>
                 </Tab>
                 <Tab label="Code">
                     Code wip
@@ -17,4 +18,4 @@ const TooltipDocs = () => {
     );
 }
 
-export default TooltipDocs;
+export default CodeDocs;

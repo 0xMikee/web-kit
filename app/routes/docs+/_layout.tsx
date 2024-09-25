@@ -1,11 +1,11 @@
 import {Outlet} from "@remix-run/react";
 import DocsLayout from "@app/components/DocsLayout";
-import Menu from "@app/components/Menu.tsx";
+import DocsMenu from "@app/components/DocsMenu.tsx";
 
 const Layout = () => {
     return (
         <DocsLayout>
-            <Menu />
+            <DocsMenu />
             <Outlet />
         </DocsLayout>
     );

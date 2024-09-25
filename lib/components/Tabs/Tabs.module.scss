@@ -1,0 +1,26 @@
+.tabs {
+  display: grid;
+}
+
+.header {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.label {
+  color: var(--color-text-secondary);
+  padding: 10px 0;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--color-text-main);
+  border-bottom: 2px solid var(--color-border-primary);
+}
+
+.content {
+  padding: 20px;
+}
