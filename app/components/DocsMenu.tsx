@@ -1,5 +1,5 @@
 import {Link} from "@lib/components/Link/Link.tsx";
-import styles from "./Menu.module.scss";
+import styles from "./DocsMenu.module.scss";
 
 const DocsMenu = () => {
     return (
@@ -14,6 +14,9 @@ const DocsMenu = () => {
             </Link>
             <Link to="components/code" className={styles.menuLink} >
                 Code
+            </Link>
+            <Link to="components/codeblock" className={styles.menuLink} >
+                Code Block
             </Link>
             <Link to="components/icon" className={styles.menuLink} >
                 Icon

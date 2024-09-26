@@ -8,7 +8,7 @@ interface TabProps {
 }
 
 export const Tab: FC<TabProps> = ({ children }) => {
-    return <div>{children}</div>;
+    return <>{children}</>;
 };
 
 interface TabsProps {

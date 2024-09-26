@@ -1,0 +1,28 @@
+.codeBlock {
+  font-size: 18px;
+}
+
+.pre {
+  position: relative;
+  padding: 14px;
+  margin: 0;
+  border-radius: 16px;
+  background-color: var(--color-bg-secondary);
+
+  &.inlineCode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.copyButton {
+  position: absolute;
+  color: initial;
+  top: 10px;
+  right: 10px;
+
+  .inlineCode & {
+    position: unset;
+  }
+}

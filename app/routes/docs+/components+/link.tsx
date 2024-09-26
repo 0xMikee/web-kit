@@ -10,7 +10,7 @@ const LinkDocs = () => {
                     <Link to="#" >
                         Link
                     </Link>
-                    <Link to="notActive" >
+                    <Link to="/" >
                         Link not active
                     </Link>
                 </Tab>
