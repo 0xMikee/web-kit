@@ -40,8 +40,7 @@ export default function App() {
                     </Tabs>
                 </Tab>
                 <Tab label="Code">
-
-                    <CodeBlock code={exampleCode} language="typescript" theme={CodeBlockTheme.vsDark} customBgColor="#181818" />
+                    <CodeBlock withCopy code={exampleCode} language="typescript" theme={CodeBlockTheme.vsDark} customBgColor="#181818" />
                 </Tab>
             </Tabs>
         </div>

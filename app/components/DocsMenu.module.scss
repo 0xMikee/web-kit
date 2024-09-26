@@ -1,6 +1,5 @@
 .menu {
   display: grid;
-  gap: 14px;
   height: max-content;
 }
 
@@ -14,6 +13,6 @@
 }
 
 .menuLink {
-  margin: 5px;
+  padding: 12px 6px;
   font-size: 14px;
 }
