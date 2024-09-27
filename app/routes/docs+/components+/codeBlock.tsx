@@ -1,8 +1,10 @@
 import Tabs, {Tab} from "@lib/components/Tabs/Tabs.tsx";
-import {CodeBlock, CodeBlockTheme} from "@lib/components/CodeBlock/CodeBlock.tsx";
+import {CodeBlock} from "@lib/components/CodeBlock/CodeBlock.tsx";
+import DocsTitle from "@app/components/DocsTitle.tsx";
+import DocsPreview from "@app/components/DocsPreview.tsx";
+import DocsContent from "@app/components/DocsContent.tsx";
 
-const CodeBlockDocs = () => {
-    const previewCode = `
+const previewCode = `
 const greet = (name: string) => {
   return 'Hello, ' + name + '!';
 }
@@ -10,7 +12,7 @@ const greet = (name: string) => {
 console.log(greet('World'));
 `;
 
-    const exampleCode = `
+const exampleCode = `
 import { CodeBlock } from '@0xmike/web-kit';
 
 const App = () => {
@@ -26,10 +28,10 @@ const App = () => {
   return (
     <CodeBlock
       code={codeSnippet}
-      language="typescript"
-      customBgColor="#181818"
-      theme={CodeBlockTheme.vsDark}
-      withCopy
+      customStyles={{
+        backgroundColor: "#181818",
+        color: "#ffffff"
+      }}
     />
   );
 }
@@ -37,20 +39,23 @@ const App = () => {
 export default App;
 `;
 
+const CodeBlockDocs = () => {
     return (
-        <div>
-            <h2>Code Block</h2>
+        <DocsContent>
+            <DocsTitle title="Code Block" />
             <Tabs>
                 <Tab label="Preview">
-                    <CodeBlock customBgColor="#181818" withCopy code={previewCode} language="tsx" theme={CodeBlockTheme.vsDark} />
+                    <DocsPreview>
+                        <CodeBlock  code={previewCode} customStyles={{backgroundColor: "#181818", color: "#ffffff"}} />
+                    </DocsPreview>
                 </Tab>
                 <Tab label="Code">
-                    <CodeBlock customBgColor="#181818" withCopy code={exampleCode} language="tsx" theme={CodeBlockTheme.vsDark} />
+                    <CodeBlock code={exampleCode} customStyles={{backgroundColor: "#181818", color: "#ffffff"}} withCopy />
                 </Tab>
             </Tabs>
             <h4>Import:</h4>
-            <CodeBlock inlineCode language="tsx" customBgColor="#181818" theme={CodeBlockTheme.vsDark} code={"import {CodeBlock} from \"@0xmike/web-kit\""} withCopy />
-        </div>
+            <CodeBlock inlineCode customStyles={{backgroundColor: "#181818", color: "#ffffff"}} code={"import {CodeBlock} from \"@0xmike/web-kit\""} withCopy />
+        </DocsContent>
     );
 }
 

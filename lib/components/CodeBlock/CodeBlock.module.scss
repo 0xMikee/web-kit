@@ -1,18 +1,25 @@
 .codeBlock {
-  font-size: 18px;
-}
-
-.pre {
   position: relative;
-  padding: 14px;
-  margin: 0;
-  border-radius: 16px;
-  background-color: var(--color-bg-secondary);
+  display: grid;
 
   &.inlineCode {
     display: flex;
-    justify-content: space-between;
+    background: #181818;
+    width: max-content;
+    justify-content: center;
     align-items: center;
+    border-radius: 16px;
+  }
+}
+
+.pre {
+  padding: 14px;
+  margin: 0;
+  border-radius: 16px;
+  overflow: auto;
+
+  .inlineCode & {
+    padding: 14px 0 14px 14px;
   }
 }
 
@@ -28,5 +35,6 @@
 
   .inlineCode & {
     position: unset;
+    padding: 0 14px 0 10px;
   }
 }

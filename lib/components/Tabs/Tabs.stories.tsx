@@ -1,4 +1,4 @@
-import { Tabs } from './Tabs';
+import Tabs, {Tab} from './Tabs';
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
@@ -11,6 +11,11 @@ type Story = StoryObj<typeof Tabs>;
 
 export const Primary: Story = {
     args: {
-        children: "Hello World!"
+        children: [
+            <>
+                <Tab label="a">a</Tab>
+                <Tab label="b">b</Tab>
+            </>
+        ],
     },
 };

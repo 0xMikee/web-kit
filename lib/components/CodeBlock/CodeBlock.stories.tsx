@@ -11,6 +11,6 @@ type Story = StoryObj<typeof CodeBlock>;
 
 export const Primary: Story = {
     args: {
-        children: "Hello World!"
+        code: "Hello World!"
     },
 };

@@ -1,6 +1,12 @@
+@import "../styles/breakpoints";
+
 .menu {
   display: grid;
   height: max-content;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
 }
 
 .sectionTitle {

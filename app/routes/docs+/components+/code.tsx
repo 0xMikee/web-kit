@@ -1,10 +1,11 @@
 import {Code} from "@lib/components/Code/Code.tsx";
 import Tabs, {Tab} from "@lib/components/Tabs/Tabs.tsx";
-import {CodeBlock, CodeBlockTheme} from "@lib/components/CodeBlock/CodeBlock.tsx";
+import {CodeBlock} from "@lib/components/CodeBlock/CodeBlock.tsx";
+import DocsTitle from "@app/components/DocsTitle.tsx";
+import DocsPreview from "@app/components/DocsPreview.tsx";
 
-const CodeDocs = () => {
-    const exampleCode =
-        `import {Code} from "@0xmike/web-kit";
+const exampleCode =
+    `import {Code} from "@0xmike/web-kit";
 
 export default function App() {
   return (
@@ -12,19 +13,22 @@ export default function App() {
   );
 }`
 
+const CodeDocs = () => {
     return (
         <div>
-            <h2>Code</h2>
+            <DocsTitle title="Code" />
             <Tabs>
                 <Tab label="Preview">
-                    <Code>npm install @0xmike/web-kit</Code>
+                    <DocsPreview>
+                        <Code>npm install @0xmike/web-kit</Code>
+                    </DocsPreview>
                 </Tab>
                 <Tab label="Code">
-                    <CodeBlock customBgColor="#181818" withCopy code={exampleCode} language="tsx" theme={CodeBlockTheme.vsDark} />
+                    <CodeBlock customStyles={{backgroundColor: "#181818", color: "#ffffff"}} withCopy code={exampleCode} />
                 </Tab>
             </Tabs>
             <h4>Import:</h4>
-            <CodeBlock inlineCode language="tsx" customBgColor="#181818" theme={CodeBlockTheme.vsDark} code={"import {Code} from \"@0xmike/web-kit\""} withCopy />
+            <CodeBlock inlineCode customStyles={{backgroundColor: "#181818", color: "#ffffff"}} code={"import {Code} from \"@0xmike/web-kit\""} withCopy />
         </div>
     );
 }

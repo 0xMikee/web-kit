@@ -8,10 +8,14 @@
   border: none;
   background-color: #2b2b2b;
   color: var(--color-text-main);
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .primary {
-  color: #181818;
+  color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
 
   &.bordered {

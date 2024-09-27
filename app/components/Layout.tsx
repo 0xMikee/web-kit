@@ -1,7 +1,7 @@
 import styles from "./Layout.module.scss";
 import type { ReactNode } from "react";
 
-export type LayoutProps = {
+type LayoutProps = {
 	children: ReactNode;
 };
 
