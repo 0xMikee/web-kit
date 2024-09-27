@@ -42,7 +42,7 @@ const ThemeSwitcher = () => {
 
 	return (
 		<Button
-			isIconOnly={true}
+			isIconOnly
 			size={ButtonSize.SMALL}
 			variant={ButtonVariant.FADED}
 			color={ButtonColor.PRIMARY}

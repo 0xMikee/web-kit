@@ -4,8 +4,7 @@ import {
     Outlet,
     Scripts, ScrollRestoration, useLoaderData,
 } from "@remix-run/react";
-import type {MetaFunction, LinksFunction, LoaderFunction} from "@remix-run/node";
-import {rootLinks} from "./utils/rootLinks.ts";
+import type {MetaFunction, LoaderFunction} from "@remix-run/node";
 import {themeSessionResolver} from "./sessions.server.tsx";
 import {PreventFlashOnWrongTheme, ThemeProvider, useTheme} from "remix-themes";
 import "./styles/global.scss";
@@ -20,9 +19,9 @@ export const meta: MetaFunction = () => {
     ];
 };
 
-export const links: LinksFunction = () => {
+/*export const links: LinksFunction = () => {
     return [...rootLinks];
-};
+};*/
 
 export const loader: LoaderFunction = async ({request}) => {
     const {getTheme} = await themeSessionResolver(request)
